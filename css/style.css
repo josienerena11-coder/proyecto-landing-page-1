@@ -1,0 +1,765 @@
+/*Tipografías (los archivos van en la carpeta fonts)*/
+@font-face{
+	font-family: "Gulfs Display";
+	src: url("../fonts/GulfsDisplay.ttf");
+}
+
+/*Etna solo viene en Bold, por eso se declara con peso 700*/
+@font-face{
+	font-family: "Etna";
+	src: url("../fonts/Etna.ttf");
+	font-weight: 700;
+}
+
+:root{
+	--color-azul:#2456a8;
+	--color-amarillo:#ffdb4d;
+	--color-rojo:#e3202a;
+	--color-rojo-hover:#c2141d;
+	--color-texto-hero:#c9d5ec;
+	--color-blanco:#ffffff;
+	--color-azul-oscuro:#1b3f8b;
+	--color-gris-input:#b3b3b3;
+}
+
+body{
+	font-family: "Etna", sans-serif;
+	font-size:16px;
+	background-color: var(--color-azul);
+	color:var(--color-blanco);
+}
+
+
+/*Menú*/
+#menu-principal{
+	background-color: var(--color-azul);
+	padding:20px 30px 0 30px;
+	z-index:100;
+}
+
+.logo{
+	width:130px;
+}
+
+.navbar-nav .nav-link{
+	color:var(--color-blanco);
+	font-size:21px;
+	font-weight:700;
+	text-transform:uppercase;
+	padding:0 40px !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .current .nav-link{
+	color:var(--color-amarillo);
+}
+
+.navbar-toggler{
+	color:var(--color-blanco);
+	border-color:var(--color-blanco);
+	font-size:24px;
+}
+
+.buscador{
+	border:2px solid var(--color-blanco);
+	border-radius:30px;
+	padding:6px 18px;
+	width:250px;
+}
+
+.buscador i{
+	font-size:20px;
+	margin-right:10px;
+}
+
+.buscador input{
+	background-color:transparent;
+	border:0;
+	border-left:2px solid var(--color-blanco);
+	color:var(--color-blanco);
+	padding-left:10px;
+	width:80%;
+}
+
+.buscador input::placeholder{
+	color:var(--color-texto-hero);
+}
+
+.buscador input:focus{
+	outline:none;
+}
+
+
+/*Hero*/
+#inicio{
+	min-height:100vh;
+	overflow:hidden;
+}
+
+.hero-carousel figure{
+	margin:0;
+}
+
+.hero-carousel .owl-dots{
+	position:relative;
+	z-index:10;
+	text-align:center;
+	margin-top:-50px;
+}
+
+.hero-carousel .owl-dot{
+	height:11px;
+	width:11px;
+	border:2px solid var(--color-blanco) !important;
+	border-radius:50%;
+	margin:35px 6px;
+}
+
+.hero-carousel .owl-dot.active{
+	background-color:var(--color-amarillo) !important;
+	border-color:var(--color-amarillo) !important;
+}
+
+.texto-hero{
+	padding:20px 50px 40px 0;
+}
+
+.titulo-principal{
+	font-family: "Gulfs Display", sans-serif;
+	font-weight:400;
+	line-height:0.85;
+	margin-bottom:30px;
+}
+
+.titulo-palabras{
+	display:inline-block;
+	text-align:left;
+	vertical-align:bottom;
+}
+
+.titulo-que{
+	font-size:78px;
+	margin-left:145px;
+}
+
+.titulo-pinche{
+	font-size:140px;
+	color:var(--color-amarillo);
+}
+
+.titulo-antojo{
+	font-size:96px;
+	margin-left:145px;
+}
+
+.titulo-exclamacion{
+	display:inline-block;
+	vertical-align:bottom;
+	font-size:195px;
+	line-height:0.8;
+	margin-left:10px;
+}
+
+.subtitulo-principal{
+	font-size:32px;
+	font-weight:700;
+	color:var(--color-amarillo);
+	margin-bottom:40px;
+}
+
+.texto-principal{
+	font-size:17px;
+	color:var(--color-texto-hero);
+	width:75%;
+	margin:0 auto 70px auto;
+}
+
+.btn-cta{
+	background-color:var(--color-rojo);
+	color:var(--color-blanco);
+	border:1px solid #6e0d12;
+	border-radius:50px;
+	padding:12px 60px;
+	font-size:33px;
+	font-weight:700;
+	text-transform:uppercase;
+	box-shadow:0 8px 0 var(--color-amarillo);
+	transition:all 0.3s ease-in-out;
+}
+
+.btn-cta:hover{
+	background-color:var(--color-rojo-hover);
+	color:var(--color-blanco);
+	box-shadow:0 4px 0 var(--color-amarillo);
+}
+
+
+/*Secciones*/
+.section{
+	padding-top:10%;
+	padding-bottom:6%;
+}
+
+
+/*Contacto*/
+.color-amarillo{
+	color:var(--color-amarillo);
+}
+
+.titulo-seccion,
+.titulo-cuadro{
+	font-family: "Gulfs Display", sans-serif;
+	font-weight:400;
+	font-size:44px;
+	margin-bottom:20px;
+}
+
+.titulo-cuadro{
+	color:var(--color-amarillo);
+	text-align:center;
+	margin-bottom:40px;
+}
+
+.texto-contacto{
+	font-size:17px;
+	color:var(--color-texto-hero);
+}
+
+.mc-field-group{
+	margin-bottom:30px;
+}
+
+.mc-field-group label{
+	color:var(--color-amarillo);
+	font-size:21px;
+	font-weight:700;
+	display:block;
+	margin-bottom:10px;
+}
+
+.mc-field-group input,
+.mc-field-group textarea{
+	background-color:var(--color-blanco);
+	border:0;
+	border-radius:20px;
+	padding:15px 20px;
+	width:100%;
+	font-family: "Etna", sans-serif;
+	font-size:22px;
+	color:var(--color-azul);
+}
+
+.mc-field-group input::placeholder,
+.mc-field-group textarea::placeholder{
+	color:var(--color-gris-input);
+}
+
+.mc-field-group input:focus,
+.mc-field-group textarea:focus{
+	outline:none;
+}
+
+.boton-form{
+	padding-left:20px;
+	margin-top:40px;
+}
+
+.boton-form .btn-cta{
+	font-size:26px;
+	padding:12px 40px;
+}
+
+.cuadro-ubicacion{
+	background-color:var(--color-azul-oscuro);
+	border-radius:25px;
+	padding:40px 30px;
+}
+
+.cuadro-ubicacion i{
+	font-size:28px;
+	color:var(--color-amarillo);
+}
+
+.cuadro-ubicacion p{
+	font-size:15px;
+	line-height:1.4;
+	margin-bottom:15px;
+}
+
+
+/*Footer*/
+#footer{
+	background-color:var(--color-azul-oscuro);
+	padding:60px 0 20px 0;
+}
+
+.logo-footer{
+	width:150px;
+}
+
+.slogan-footer{
+	color:var(--color-texto-hero);
+	font-size:18px;
+	margin-top:15px;
+}
+
+.titulo-footer{
+	font-family: "Gulfs Display", sans-serif;
+	font-weight:400;
+	font-size:22px;
+	color:var(--color-amarillo);
+	margin-bottom:25px;
+}
+
+.lista-footer{
+	list-style:none;
+	padding:0;
+}
+
+.lista-footer li{
+	margin-bottom:15px;
+}
+
+.lista-footer a{
+	color:var(--color-blanco);
+	font-size:21px;
+	font-weight:700;
+	text-decoration:none;
+}
+
+.lista-footer a:hover{
+	color:var(--color-amarillo);
+}
+
+.redes-footer{
+	color:var(--color-amarillo);
+	font-size:48px;
+	margin-right:20px;
+}
+
+.redes-footer:hover{
+	color:var(--color-blanco);
+}
+
+.linea-footer{
+	border-top:2px solid var(--color-azul);
+	margin-top:60px;
+	padding-top:25px;
+}
+
+.linea-footer p,
+.linea-footer a{
+	color:var(--color-texto-hero);
+	font-size:17px;
+	text-decoration:none;
+}
+
+.linea-footer a:hover{
+	color:var(--color-amarillo);
+}
+
+/*Responsive*/
+@media (max-width:1399px){
+	.titulo-que{
+		font-size:70px;
+		margin-left:130px;
+	}
+	.titulo-pinche{
+		font-size:127px;
+	}
+	.titulo-antojo{
+		font-size:87px;
+		margin-left:130px;
+	}
+	.titulo-exclamacion{
+		font-size:175px;
+	}
+	.subtitulo-principal{
+		font-size:29px;
+	}
+	.navbar-nav .nav-link{
+		padding:0 30px !important;
+	}
+}
+
+@media (max-width:1199px){
+	.titulo-que{
+		font-size:54px;
+		margin-left:100px;
+	}
+	.titulo-pinche{
+		font-size:98px;
+	}
+	.titulo-antojo{
+		font-size:67px;
+		margin-left:100px;
+	}
+	.titulo-exclamacion{
+		font-size:135px;
+	}
+	.subtitulo-principal{
+		font-size:23px;
+	}
+	.navbar-nav .nav-link{
+		font-size:18px;
+		padding:0 18px !important;
+	}
+	.buscador{
+		width:200px;
+	}
+	.btn-cta{
+		font-size:26px;
+	}
+}
+
+@media (max-width:991px){
+	.navbar-nav{
+		margin:20px 0 !important;
+	}
+	.navbar-nav .nav-link{
+		padding:10px 0 !important;
+	}
+	.buscador{
+		width:100%;
+		margin-bottom:20px;
+	}
+	.texto-hero{
+		padding:30px 20px 60px 20px;
+	}
+	.boton-hero{
+		text-align:center !important;
+	}
+}
+
+.titulo-seccion,
+	.titulo-cuadro{
+		font-size:36px;
+	}
+	.cuadro-ubicacion{
+		margin-top:40px;
+	}
+	.boton-form{
+		text-align:center;
+		padding-left:0;
+	}
+	.slogan-footer{
+		margin-bottom:40px;
+	}
+
+@media (max-width:575px){
+	.logo{
+		width:90px;
+	}
+	.titulo-que{
+		font-size:44px;
+		margin-left:80px;
+	}
+	.titulo-pinche{
+		font-size:80px;
+	}
+	.titulo-antojo{
+		font-size:55px;
+		margin-left:80px;
+	}
+	.titulo-exclamacion{
+		font-size:110px;
+	}
+	.subtitulo-principal{
+		font-size:19px;
+	}
+	.texto-principal{
+		width:100%;
+		font-size:15px;
+		margin-bottom:50px;
+	}
+	.btn-cta{
+		font-size:22px;
+		padding:10px 40px;
+	}
+}
+.titulo-seccion,
+	.titulo-cuadro{
+		font-size:28px;
+	}
+	.mc-field-group label{
+		font-size:18px;
+	}
+
+/*Más sabor, en cada bocado*/
+#sabor{
+	padding-bottom:80px;
+}
+ 
+/*Borde de flores: la imagen va en img/flores-borde.png y se repite en horizontal*/
+.borde-flores{
+	height:137px;
+	background-repeat:repeat-x;
+	background-position:center top;
+	background:url( "../img/banderitas.png") repeat-x center top;
+	background-size:auto 100%;
+	margin-bottom:40px;
+}
+ 
+
+.titulo-sabor{
+	font-family: "Gulfs Display", sans-serif;
+	font-weight:400;
+	font-size:80px;
+	line-height:1;
+	text-align:left;
+	display:inline-block;
+	position:relative;
+	margin-bottom:25px;
+}
+ 
+.sabor-linea-1,
+.sabor-linea-2{
+	display:block;
+	white-space:nowrap;
+}
+ 
+.sabor-linea-2{
+	margin-left:2.2em;
+}
+ 
+/*Rayitas rojas a los lados del título*/
+.titulo-sabor::before,
+.titulo-sabor::after{
+	content:"";
+	position:absolute;
+	top:5px;
+	width:120px;
+	height:210px;
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+ 
+.titulo-sabor::before{
+	left:-130px;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 210'%3E%3Cg stroke='%23e3202a' stroke-width='14' stroke-linecap='round'%3E%3Cline x1='20' y1='12' x2='85' y2='38'/%3E%3Cline x1='12' y1='112' x2='105' y2='88'/%3E%3Cline x1='25' y1='198' x2='55' y2='128'/%3E%3C/g%3E%3C/svg%3E");
+}
+ 
+.titulo-sabor::after{
+	right:-110px;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 210'%3E%3Cg stroke='%23e3202a' stroke-width='14' stroke-linecap='round'%3E%3Cline x1='35' y1='85' x2='62' y2='12'/%3E%3Cline x1='12' y1='118' x2='108' y2='90'/%3E%3Cline x1='18' y1='165' x2='92' y2='198'/%3E%3C/g%3E%3C/svg%3E");
+}
+ 
+.texto-sabor{
+	font-size:24px;
+	font-weight:700;
+	max-width:640px;
+	margin:0 auto 70px auto;
+}
+ 
+.beneficio{
+	margin-bottom:40px;
+	padding:0 25px;
+}
+ 
+.icono-beneficio{
+	width:110px;
+	height:110px;
+	margin:0 auto 20px auto;
+	border-radius:50%;
+	background-color:var(--color-amarillo);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+ 
+.icono-beneficio i{
+	font-size:48px;
+	color:var(--color-azul);
+}
+ 
+.titulo-beneficio{
+	font-size:24px;
+	font-weight:700;
+	color:var(--color-blanco);
+	margin-bottom:12px;
+}
+ 
+.texto-beneficio{
+	font-size:17px;
+	line-height:1.4;
+	color:var(--color-texto-hero);
+	max-width:260px;
+	margin:0 auto;
+}
+ 
+.boton-sabor{
+	margin-top:20px;
+}
+ 
+.btn-probarlo{
+	text-transform:none;
+	padding:12px 45px;
+}
+ 
+@media (max-width:1199px){
+	.titulo-sabor{
+		font-size:60px;
+	}
+	.titulo-sabor::before{
+		left:-100px;
+		width:90px;
+	}
+	.titulo-sabor::after{
+		right:-85px;
+		width:90px;
+	}
+	.texto-sabor{
+		font-size:20px;
+	}
+	.beneficio{
+		padding:0 10px;
+	}
+}
+ 
+@media (max-width:991px){
+	.boton-sabor{
+		text-align:center !important;
+	}
+}
+ 
+@media (max-width:767px){
+	.borde-flores{
+		height:90px;
+	}
+	.titulo-sabor{
+		font-size:40px;
+	}
+	.sabor-linea-2{
+		margin-left:1em;
+	}
+	.titulo-sabor::before,
+	.titulo-sabor::after{
+		display:none;
+	}
+	.texto-sabor{
+		font-size:17px;
+		margin-bottom:40px;
+	}
+}
+
+/*Así se vive el pinche antojo*/
+.titulo-vivir{
+	font-family: "Gulfs Display", sans-serif;
+	font-weight:400;
+	font-size:88px;
+	line-height:0.95;
+	margin-bottom:20px;
+}
+
+.vivir-linea-1,
+.vivir-linea-2{
+	display:block;
+}
+
+.vivir-linea-1{
+	margin-right:20%;
+}
+
+.vivir-linea-2{
+	margin-left:20%;
+}
+
+.texto-vivir{
+	font-size:26px;
+	max-width:1300px;
+	margin:0 auto 40px auto;
+}
+
+.polaroids{
+	display:flex;
+	justify-content:center;
+	padding:0 3%;
+	margin-bottom:50px;
+}
+
+.polaroid{
+	width:20%;
+	margin:0 -4px;
+	background-color:#f2f2f2;
+	padding:15px 15px 70px 15px;
+	box-shadow:0 4px 12px rgba(0,0,0,0.3);
+	transition:all 0.3s ease-in-out;
+}
+
+.polaroid figure{
+	margin:0;
+}
+
+.polaroid img{
+	width:100%;
+	height:230px;
+	object-fit:cover;
+}
+
+.polaroid:nth-child(1){
+	transform:rotate(2deg);
+}
+
+.polaroid:nth-child(2){
+	transform:rotate(-3deg);
+}
+
+.polaroid:nth-child(3){
+	transform:rotate(2deg);
+}
+
+.polaroid:nth-child(4){
+	transform:rotate(-1deg);
+}
+
+.polaroid:nth-child(5){
+	transform:rotate(3deg);
+}
+
+.polaroid:hover{
+	transform:rotate(0) scale(1.08);
+	position:relative;
+	z-index:2;
+}
+
+.btn-vivir{
+	text-transform:none;
+	padding:12px 45px;
+}
+
+@media (max-width:1199px){
+	.titulo-vivir{
+		font-size:68px;
+	}
+	.texto-vivir{
+		font-size:21px;
+	}
+	.polaroid img{
+		height:170px;
+	}
+}
+
+@media (max-width:767px){
+	.titulo-vivir{
+		font-size:46px;
+	}
+	.vivir-linea-1,
+	.vivir-linea-2{
+		margin:0;
+	}
+	.texto-vivir{
+		font-size:17px;
+	}
+	.polaroids{
+		flex-wrap:wrap;
+		gap:20px;
+	}
+	.polaroid{
+		width:44%;
+		margin:0;
+		padding:10px 10px 40px 10px;
+	}
+	.polaroid img{
+		height:160px;
+	}
+}
